@@ -62,4 +62,4 @@ scratch.md
 
 # environment variables
 .env
-packages/
+packages/server/api/.env
