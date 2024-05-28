@@ -7,6 +7,7 @@ import {
 } from '@activepieces/pieces-common';
 import { baseUrl } from './lib/common/common';
 import { promptCompletion } from './lib/actions/prompt-completion';
+import { capabilityCallback } from './lib/triggers/capability-callback';
 import { PieceCategory } from '@activepieces/shared';
 
 const markdownDescription = `
@@ -64,5 +65,5 @@ export const straico = createPiece({
       },
     }),
   ],
-  triggers: [],
+  triggers: [capabilityCallback],
 });
