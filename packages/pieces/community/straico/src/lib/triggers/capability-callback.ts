@@ -36,11 +36,12 @@ export const capabilityCallback = createTrigger({
     },
     type: TriggerStrategy.WEBHOOK,
     async onEnable(context){
-        const token = "TOKEN"
+        const token = "Rh-qNJ9ofSZuBeHheY2B3AdK83AbC7LDyT85vBgNu8ehhwdksE7"
         const capabilityId = context.propsValue['capability_id'];
         const url = `${straicoCommon.baseUrl}/${straicoCommon.webhooks}`;
         const eventType = 'CAPABILITY_TRIGGERED';
         const endpoint = context.webhookUrl;
+
     
         const { response_body } = await straicoWebhookPostRequest({
           token,
@@ -51,7 +52,7 @@ export const capabilityCallback = createTrigger({
         });
 
         await context.store?.put<TriggerData>(TRIGGER_DATA_STORE_KEY, {
-            webhookId: response_body['capability_webhook']['_id'],
+            webhookId: response_body['_id'],
         });
     },
     async onDisable(context){

@@ -11,6 +11,7 @@ config({ path: 'packages/server/api/.env' });
 const packages = process.env.AP_DEV_PIECES?.split(',') || [];
 
 async function main() {
+  console.log(packages)
   for (const packageName of packages) {
     console.log(chalk.blue(`Starting Turbowatch for package: ${packageName}`));
     // Define the inline configuration
