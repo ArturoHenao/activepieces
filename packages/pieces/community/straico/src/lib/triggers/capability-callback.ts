@@ -30,9 +30,9 @@ export const capabilityCallback = createTrigger({
     sampleData: {
         title : "Mario Party with friends!",
         start_datetime: "15/06/2024 11:00 a.m.",
-        duration: "240 minutes",
+        end_datetime: "15/06/2024 11:30 a.m.",
         location: "Roro's House",
-        invitees: "juan@gmail.com, arturo@gmail.com",
+        invitee: "arturo@gmail.com",
     },
     type: TriggerStrategy.WEBHOOK,
     async onEnable(context){
